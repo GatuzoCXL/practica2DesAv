@@ -1,0 +1,17 @@
+# Build folders
+bin/
+obj/
+
+# README file
+README.md
+
+# Configuration files with DB connection
+appsettings.json
+appsettings.Development.json
+
+# Unnecessary files for this practice
+Views/
+wwwroot/
+Properties/
+Models/ErrorViewModel.cs
+Models/dbContextpractica2.cs
