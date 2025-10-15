@@ -2,12 +2,25 @@
 bin/
 obj/
 
-# README file
-README.md
+# Markdown files
+*.md
 
 # Configuration files with DB connection
 appsettings.json
 appsettings.Development.json
+
+# IDE files
+.vs/
+.idea/
+*.user
+*.suo
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
 
 # Unnecessary files for this practice
 Views/

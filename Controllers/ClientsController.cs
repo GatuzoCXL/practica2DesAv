@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using practica_VargasLeonardo.Interfaces;
-using practica_VargasLeonardo.Models;
+using practica_VargasLeonardo.Application.Interfaces;
+using practica_VargasLeonardo.Domain.Entities;
 
 namespace practica_VargasLeonardo.Controllers;
 

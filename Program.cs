@@ -1,19 +1,24 @@
 using Microsoft.EntityFrameworkCore;
-using practica_VargasLeonardo.Models;
-using practica_VargasLeonardo.Interfaces;
-using practica_VargasLeonardo.UnitOfWork;
+using practica_VargasLeonardo.Infrastructure.Data;
+using practica_VargasLeonardo.Application.Interfaces;
+using practica_VargasLeonardo.Infrastructure.Repositories;
+using practica_VargasLeonardo.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// DbContext - Comentado para práctica sin DB
-// builder.Services.AddDbContext<dbContextpractica2>(options =>
-//     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+// DbContext configuration
+builder.Services.AddDbContext<dbContextpractica2>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Unit of Work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Application Services
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // Swagger configuration
 builder.Services.AddEndpointsApiExplorer();
